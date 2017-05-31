@@ -8,3 +8,19 @@ docker for parsec
 ```
 galaxy-parsec 1.0.1
 ```
+
+and
+
+```
+jq
+```
+
+# How to use
+
+```
+docker run --rm -e
+```
+
+## How to specify parsec.yml
+
+Use environment value `PARSEC_GLOBAL_CONFIG_PATH`
