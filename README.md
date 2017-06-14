@@ -17,8 +17,24 @@ jq
 
 # How to use
 
+## init with specify config file
+
 ```
-docker run --rm -e
+docker run --rm -v $PWD:/work manabuishii/docker-parsec:1.0.2 parsec -f /work/sample.yml init
+```
+
+## get_histories
+
+
+```
+docker run --rm -v $PWD:/work manabuishii/docker-parsec:1.0.2 parsec -f /work/sample.yml histories get_histories
+```
+
+## example first history id
+
+```
+$ docker run --rm -v $PWD:/work manabuishii/docker-parsec:1.0.2 parsec -f /work/sample.yml histories get_histories | docker run -i --rm manabuishii/docker-parsec:1.0.2 jq .'[0].id'
+"f597429621d6eb2b"
 ```
 
 ## How to specify parsec.yml
